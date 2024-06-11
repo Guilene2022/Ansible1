@@ -1,0 +1,19 @@
+---
+port_nums: [8081,22,8080,3000,80,443]
+
+fav_subject: Devops
+
+fav_color: red
+
+users:
+  lisa:
+    username: smith
+    uid: 1122
+    shell: /bin/bash
+  bob:
+    username: alex
+    uid: 2231
+    shell: /bin/sh
+    
+
+  

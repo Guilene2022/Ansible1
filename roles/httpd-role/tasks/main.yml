@@ -1,0 +1,23 @@
+---
+# tasks file for httpd-role
+- name: install httpd
+  package: 
+    name: httpd
+    state: present
+  when: ansible_os_family=="RedHat"
+- name: install httpd on Debian family
+  apt:
+    update_cache: yes
+    name: apache2
+    state: present
+  when: ansible_os_family=="Debian"
+- name: start and enable httpd
+  service:
+    name: apache2
+    state: started
+    enabled: true
+- name: create index.html using jinja2
+  template:
+    src: index.j2
+    dest: /var/www/html/index.html
+    

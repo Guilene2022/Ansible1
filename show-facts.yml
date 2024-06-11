@@ -1,0 +1,10 @@
+---
+- name: show some gather_facts
+  hosts: db 
+  tasks:
+    - name: display ip address
+      debug:
+        msg: ip address is {{ansible_facts.default_ipv4.address}}
+    - name: display the os distribution
+      debug:
+        msg: display the {{ansible_facts.os_family}}

@@ -1,0 +1,17 @@
+---
+- name: 
+  hosts: ws
+  vars_prompt: 
+    - name: username 
+      prompt: what's your name?
+      private: no
+    - name: password
+      prompt: Enter password
+      private: yes
+  tasks: 
+  - name: greet the username
+    debug:
+      msg: hello {{username}} 
+  - name: enter password
+    debug:
+      msg: your password is {{password}}    

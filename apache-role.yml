@@ -1,0 +1,7 @@
+---
+- name: using httpd-role
+  hosts: db 
+  become: yes
+  roles:
+  - role: httpd-role
+    sysadmin: something@gmail.com

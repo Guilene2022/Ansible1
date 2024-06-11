@@ -1,0 +1,11 @@
+---
+- hosts: ws
+  become: 1
+  gather_facts: 1
+  ignore_errors: True
+  tasks: 
+    - name: package install
+      yum: 
+        name: ["wget","httpd"]
+        state: present 
+      

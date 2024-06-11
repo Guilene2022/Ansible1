@@ -1,0 +1,9 @@
+---
+- name: Applying geerlingguy.mysql.yml role
+  hosts: all
+  become: yes 
+  roles: 
+   
+    - haproxy
+    - nginx
+    

@@ -1,0 +1,31 @@
+---
+- name: working with variables
+  hosts: ws
+  become: yes
+  
+  vars:
+   
+    users: 
+      Guilene:
+        username: gui
+        uid: 1122
+        shell: /bin/bash
+      Rita:
+        username: rita
+        uid: 2211
+        shell: /bin/sh
+      Guilene2:
+        username: vyvy
+        uid: 3214
+        shell: /sbin/nologin
+  tasks:
+    - name: show user username
+      
+  
+      user:   
+        name: "{{item}}"
+      loop: "{{ users }}"
+       
+    - name: show 2nd item in port_nums
+      debug:
+        msg: ssh port is {{port_nums[0]}}

@@ -1,0 +1,12 @@
+# From Ansible Galaxy
+- src: geerlingguy.haproxy
+  name: haproxy
+
+# From GitHub
+- src: https://github.com/bennojoy/nginx
+  name: nginx
+  version: master
+# From Ansible Galaxy
+- src: geerlingguy.jenkins
+  name: jenkins_role   
+

@@ -1,0 +1,13 @@
+---
+- name: Reusing playbooks
+  hosts: ws
+  become: yes
+  tasks:
+    - name: Reboot the servers
+      reboot:
+        msg: Server is rebooting ...
+- name: Run code2
+  import_playbook: play1.yml
+
+- name: Include tasks from group-tasks.yml
+  include_tasks: group-tasks.yml
