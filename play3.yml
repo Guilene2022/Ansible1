@@ -2,7 +2,7 @@
 - hosts: ws
   become: 1
   gather_facts: 1
-  ignore_errors: True
+  ignore_errors: true
   tasks: 
     - name: package install
       yum: 
